@@ -210,54 +210,54 @@ st.markdown(html_table, unsafe_allow_html=True)
 
 st.markdown('<hr>', unsafe_allow_html=True)
 
-# Add expandable sections for each dimension
-st.subheader("📊 Detailed Analysis by Dimension")
+# # Add expandable sections for each dimension
+# st.subheader("📊 Detailed Analysis by Dimension")
 
-for idx, row in df.iterrows():
-    dimension = row['Dimension'].replace('\n', ' ')
-    with st.expander(f"**{dimension}**"):
-        col1, col2 = st.columns(2)
+# for idx, row in df.iterrows():
+#     dimension = row['Dimension'].replace('\n', ' ')
+#     with st.expander(f"**{dimension}**"):
+#         col1, col2 = st.columns(2)
         
-        with col1:
-            st.success("**What They Got Right**")
-            st.write(row['What They Got Right ✅'])
-            st.info(f"**Framework Used:** {row['Ethical Framework Used']}")
+#         with col1:
+#             st.success("**What They Got Right**")
+#             st.write(row['What They Got Right ✅'])
+#             st.info(f"**Framework Used:** {row['Ethical Framework Used']}")
         
-        with col2:
-            st.error("**What They Got Wrong**")
-            st.write(row['What They Got Wrong ⚠️'])
-            st.warning(f"**Better Alternative:** {row['Better Alternative Framework']}")
+#         with col2:
+#             st.error("**What They Got Wrong**")
+#             st.write(row['What They Got Wrong ⚠️'])
+#             st.warning(f"**Better Alternative:** {row['Better Alternative Framework']}")
 
-# Summary metrics
-st.markdown('<hr>', unsafe_allow_html=True)
-st.subheader("📈 Summary Insights")
+# # Summary metrics
+# st.markdown('<hr>', unsafe_allow_html=True)
+# st.subheader("📈 Summary Insights")
 
-col1, col2, col3 = st.columns(3)
+# col1, col2, col3 = st.columns(3)
 
-with col1:
-    st.metric(
-        label="Primary Framework Used",
-        value="Utilitarianism",
-        delta="Outcome-driven",
-        delta_color="off"
-    )
+# with col1:
+#     st.metric(
+#         label="Primary Framework Used",
+#         value="Utilitarianism",
+#         delta="Outcome-driven",
+#         delta_color="off"
+#     )
 
-with col2:
-    st.metric(
-        label="Key Issue",
-        value="Privacy Concerns",
-        delta="Individual rights overlooked",
-        delta_color="inverse"
-    )
+# with col2:
+#     st.metric(
+#         label="Key Issue",
+#         value="Privacy Concerns",
+#         delta="Individual rights overlooked",
+#         delta_color="inverse"
+#     )
 
-with col3:
-    st.metric(
-        label="Recommended Approach",
-        value="Rights-Based Ethics",
-        delta="Better balance needed",
-        delta_color="normal"
-    )
+# with col3:
+#     st.metric(
+#         label="Recommended Approach",
+#         value="Rights-Based Ethics",
+#         delta="Better balance needed",
+#         delta_color="normal"
+#     )
 
-# Footer
-st.markdown('<hr>', unsafe_allow_html=True)
-st.caption("🔍 This analysis examines the ethical implications of automated surveillance technology and proposes alternative frameworks for more equitable implementation.")
+# # Footer
+# st.markdown('<hr>', unsafe_allow_html=True)
+# st.caption("🔍 This analysis examines the ethical implications of automated surveillance technology and proposes alternative frameworks for more equitable implementation.")
