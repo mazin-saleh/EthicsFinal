@@ -1,0 +1,6 @@
+streamlit>=1.51.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+numpy>=1.24.0
+altair<6,>=4.0
+pydeck<1,>=0.8.0b4
